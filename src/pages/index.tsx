@@ -24,7 +24,7 @@ function HomepageHeader() {
         <br />
         <Link
           className="button button--secondary button--lg"
-          to="/leetcode/intro">
+          to="docs/leetcode/intro">
           LeetCode Animations
         </Link>
       </div>
