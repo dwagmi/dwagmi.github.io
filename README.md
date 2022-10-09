@@ -1,6 +1,6 @@
 # LeetCode Animations 
 
-Access at https://dwagmi.github.io !
+Access at https://dwagmi.github.io/docs/leetcode/intro !
 
 A collection of animations of solutions for LeetCode problems!
 
