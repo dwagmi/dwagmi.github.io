@@ -4,59 +4,28 @@ sidebar_position: 1
 
 # LeetCode Animations
 
+Companion resource for https://neetcode.io/practice
 
 ## Linked List 
+
+<details><summary>Merge Two Sorted Lists</summary>
+<p>
+
+[LeetCode Problem](https://leetcode.com/problems/merge-two-sorted-lists/) | [Code Solution](https://github.com/neetcode-gh/leetcode/blob/main/java/21-Merge-Two-Sorted-Lists.java)
+
+<iframe src='/leetcode/reorder-list.html' width='100%' height='600px'></iframe> 
+</p>
+</details>
 
 <details><summary>Reorder List</summary>
 <p>
 
 [LeetCode Problem](https://leetcode.com/problems/reorder-list/) | [Code Solution](https://github.com/neetcode-gh/leetcode/blob/main/java/143-Reorder-List.java)
+
+1. Find middle of linked list. 
+2. Reverse the 2nd half of the linked list. 
+3. Merge the 2 halves. 
+
 <iframe src='/leetcode/reorder-list.html' width='100%' height='600px'></iframe> 
-
-```java 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
-class Solution {
-
-    public void reorderList(ListNode head) {
-        ListNode slow = head;
-        ListNode fast = head.next;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-
-        ListNode second = slow.next;
-        ListNode prev = slow.next = null;
-        while (second != null) {
-            ListNode tmp = second.next;
-            second.next = prev;
-            prev = second;
-            second = tmp;
-        }
-
-        ListNode first = head;
-        second = prev;
-        while (second != null) {
-            ListNode tmp1 = first.next;
-            ListNode tmp2 = second.next;
-            first.next = second;
-            second.next = tmp1;
-            first = tmp1;
-            second = tmp2;
-        }
-    }
-}
-```
-
 </p>
 </details>
-
