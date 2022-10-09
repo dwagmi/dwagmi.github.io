@@ -11,9 +11,23 @@ Companion resource for https://neetcode.io/practice
 <details><summary>Merge Two Sorted Lists</summary>
 <p>
 
-[LeetCode Problem](https://leetcode.com/problems/merge-two-sorted-lists/) | [Code Solution](https://github.com/neetcode-gh/leetcode/blob/main/java/21-Merge-Two-Sorted-Lists.java)
+[LeetCode Problem](https://leetcode.com/problems/merge-two-sorted-lists/) | [Code Solutions](https://github.com/neetcode-gh/leetcode/blob/main/java/21-Merge-Two-Sorted-Lists.java)
 
-<iframe src='/leetcode/reorder-list.html' width='100%' height='600px'></iframe> 
+<em>Non-recursive Solution</em>
+
+1. Create a new empty node. 
+2. Iterate through both lists simulatenously. 
+3. Pick the lower value to add to the new list. 
+
+<iframe src='/leetcode/merge-two-sorted-lists.html' width='100%' height='650px'></iframe> 
+
+<em>Recursive Solution</em>
+
+1. If list1.val < list2.val, then recurse with list1.next and set result to list1.next
+2. Otherwise, recurse with list2.next and set result to list2.next
+3. If either list1 or list2 are null, then return the non-null list. 
+
+<iframe src='/leetcode/merge-two-sorted-lists-recursive.html' width='100%' height='650px'></iframe> 
 </p>
 </details>
 
@@ -26,6 +40,6 @@ Companion resource for https://neetcode.io/practice
 2. Reverse the 2nd half of the linked list. 
 3. Merge the 2 halves. 
 
-<iframe src='/leetcode/reorder-list.html' width='100%' height='600px'></iframe> 
+<iframe src='/leetcode/reorder-list.html' width='100%' height='650px'></iframe> 
 </p>
 </details>
